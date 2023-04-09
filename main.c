@@ -4,7 +4,6 @@
 #include <stdbool.h>
 #include <time.h>
 
-
 #define MAX_NAME_LENGTH 50
 #define MAX_DIAGNOSIS_LENGTH 250
 #define MAX_TAG_LENGTH 20
@@ -13,7 +12,6 @@
 #define MAX_PASSWORD_LENGTH 25
 #define FILE_NAME "patients.txt"
 #define CREDENTIALS_FILE "credentials.txt"
-
 
 
 // Defines the patient struct
@@ -35,13 +33,15 @@ typedef struct user {
 } User;
 
 
-
 void println(){
     printf("-----------------------------------------------------------------------------------------------------------------------\n");
 }
+
+
 void println_equal(){
     printf("=======================================================================================================================\n");
 }
+
 
 // Dispalys a personalised header for each menu
 void display_header(const char title[]){
@@ -56,8 +56,6 @@ void display_header(const char title[]){
     printf("|%*s%s%*s|\n", padding, "", title, padding, "");
     println();
 }
-
-
 
 
 // Reads the patient data from a file
@@ -86,6 +84,7 @@ Patient* read_data(void) {
     return head;
 }
 
+
 // Writes the patient data to a file
 void write_data(Patient* head) {
     FILE* file = fopen(FILE_NAME, "w");
@@ -104,9 +103,6 @@ void write_data(Patient* head) {
 }
 
 
-
-
-
 void display_patient(Patient* current) {
     // Display patient information in a table
     println_equal();
@@ -119,6 +115,7 @@ void display_patient(Patient* current) {
     println();
     printf("\n");
 }
+
 
 //User* login(User* head) {
 //    display_header("LOGIN");
@@ -208,6 +205,7 @@ void search_patient(Patient* head) {
     }
 }
 
+
 // Generates a report of the patients in the system   !!PLACEHOLDER
 void report_status(Patient* head) {
     display_header("PATIENT REPORT");
@@ -224,6 +222,7 @@ void report_status(Patient* head) {
     getchar();
     getchar();
 }
+
 
 void display_all_patients(Patient* head) {
     int counter = 1;
@@ -262,6 +261,7 @@ void display_all_patients(Patient* head) {
     getchar();
     while (getchar() != '\n');
 }
+
 
 void display_todays_patients(Patient* head) {
     // Get today's date and time
@@ -403,6 +403,7 @@ bool validate_time(char* time) {
     return true;
 }
 
+
 // Authentication for the user  !!PLACEHOLDER
 bool authenticate() {
     display_header("LOGIN");
@@ -420,6 +421,7 @@ bool authenticate() {
         return false;
     }
 }
+
 
 // Authentication for the user
 //bool authenticate(User* users, int num_users) {
@@ -477,6 +479,7 @@ bool authenticate() {
 //    getchar();
 //}
 //
+//
 //User* read_users(void) {
 //    FILE* file = fopen("users.txt", "r");
 //    if (!file) {
@@ -518,6 +521,7 @@ bool authenticate() {
 //    fclose(file);
 //    printf("User data saved to users.txt\n");
 //}
+
 
 // Searches for and edits a pacient
 void edit_patient(Patient** head_ref) {
@@ -668,6 +672,7 @@ void swap_patients(Patient* a, Patient* b) {
 //    display_all_patients(*head_ref);
 //}
 
+
 void add_patient(Patient** head_ref) {
     display_header("NEW PATIENT");
 
@@ -722,6 +727,7 @@ void add_patient(Patient** head_ref) {
     getchar();
 }
 
+
 // Deletes all pacients but does not currently saves the new state to a file
 void delete_all_patients(Patient **head) {
     Patient *current = *head;
@@ -745,6 +751,7 @@ void delete_all_patients(Patient **head) {
     getchar();
     while (getchar() != '\n');
 }
+
 
 // Displays the main menu
 void main_menu(Patient* head) {
@@ -809,6 +816,7 @@ void main_menu(Patient* head) {
     }
 }
 
+
 //The main function, of course
 int main() {
     Patient* head = read_data();
@@ -827,7 +835,6 @@ int main() {
     main_menu(head);
     return 0;
 }
-
 
 
 //// Writes the patient data to a file
