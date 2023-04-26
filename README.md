@@ -1,6 +1,6 @@
 # Linked-List-Medical-Office-Management-System-C
 
-The Linked-list Medical Management System is the first project developed for the Programming Project discipline at the university. It leverages the knowledge of C programming language and data structures gained in the first half of the semester to create an intuitive and effective application for healthcare providers to manage patient data.
+The Linked-list Medical Management System is the first of two projects developed for the Programming Project discipline during Year 1 - Sem 2 at myt university. It leverages the knowledge of C programming language and data structures gained in the first half of the semester to create an intuitive and effective application for healthcare providers to manage patient data.
 
 The application is implemented as a CLI, with a user-friendly interface that offers various functionalities to manage patient records. The core data structure used is a Linked List, which allows for efficient storage and management of patient records.
 
