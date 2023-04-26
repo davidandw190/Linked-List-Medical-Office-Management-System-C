@@ -14,10 +14,10 @@ To ensure data integrity, the system also contains validations when performing C
 To install this program, simply clone the repository and compile the code using a C compiler. Here are the steps:
 
 1. Open your terminal and navigate to the directory where you want to install the program.
-2. Clone the repository using the following command: `git clone https://github.com/davidandw190/Linked-List-Medical-Office-Management-System-C.git`
-3. Navigate to the cloned directory using the following command: `cd Linked-List-Medical-Office-Management-System-C`
-4. Compile the code using a C compiler of your choice. Here's an example using GCC: `gcc main.c -o linked_list_medical`
-5. Run the program using the following command:`./linked_list_medical`
+2. Clone the repository using the following command:  `git clone https://github.com/davidandw190/Linked-List-Medical-Office-Management-System-C.git`
+3. Navigate to the cloned directory using the following command:  `cd Linked-List-Medical-Office-Management-System-C`
+4. Compile the code using a C compiler of your choice. Here's an example using GCC:  `gcc main.c -o Medical-Management-System`
+5. Run the program using the following command: `./Medical-Management-System`
 
 ## Usage
 
